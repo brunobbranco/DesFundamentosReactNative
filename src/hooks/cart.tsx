@@ -81,20 +81,9 @@ const CartProvider: React.FC = ({ children }) => {
       }
 
       await AsyncStorage.setItem(
-        '@GoMarketPlace:product',
+        '@GoMarketplace:products',
         JSON.stringify(items),
       );
-
-      // const itemProd = products.find(product => product.id === id);
-      // itemProd.quantity += 1;
-
-      // try {
-      //   await AsyncStorage.setItem(id.toString(), JSON.stringify(itemProd));
-      //   const prod = await AsyncStorage.getItem(id.toString());
-      //   setProducts(state => [...state]);
-      // } catch (err) {
-      //   console.log(err);
-      // }
     },
     [products],
   );
@@ -113,7 +102,7 @@ const CartProvider: React.FC = ({ children }) => {
       }
 
       await AsyncStorage.setItem(
-        '@GoMarketPlace:product',
+        '@GoMarketplace:products',
         JSON.stringify(items),
       );
 
